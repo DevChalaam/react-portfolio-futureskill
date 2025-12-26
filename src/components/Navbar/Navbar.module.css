@@ -1,0 +1,132 @@
+nav {
+  background: #0085ff;
+  overflow: hidden;
+  position: relative;
+
+  & a {
+    color: #fff;
+  }
+
+  .bars {
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    top: 45px;
+  }
+
+  & .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  & .nav_container {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+      & a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+
+    & ul {
+      display: flex;
+      list-style: none;
+
+      & li {
+        margin: 0 35px;
+
+        & a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    & .button {
+      width: 100px;
+      height: 35px;
+      border: #fff;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      & :hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+      }
+
+      & a {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 480px) {
+  .nav_container {
+    flex-direction: column;
+    height: auto !important;
+    margin: 50px 0;
+    align-items: start !important;
+    margin-left: 30px;
+
+    & ul,.button {
+      display: none !important;
+    }
+  }
+
+  .mobile_menu {
+    list-style: none;
+
+    & li {
+      margin-top: 35px;
+      margin-left: 24px;
+
+      & a {
+        text-decoration: none;
+        font-size: 24px;
+      }
+    }
+  }
+
+  & .mobile_button {
+    width: 150px;
+    height: 60px;
+    border: #fff;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 24px;
+    margin-left: 24px;
+
+    & :hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    & a {
+      text-decoration: none;
+      color: #333;
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px){
+
+  & .mobile_menu, .bars, & .mobile_button {
+    display: none;
+    }
+}
